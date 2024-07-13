@@ -16,7 +16,7 @@ const ingredients = ref([])
 
 onMounted(async () => {
   const res = await axiosClient.get('/list.php?i=list')
-  console.log('res', res.data.meals)
+  // console.log('res', res.data.meals)
   ingredients.value = res.data.meals
 })
 
@@ -25,9 +25,6 @@ onMounted(async () => {
 <template>
   <div class="home flex flex-col items-center p-8 ">
 
-    <input type="text" class="rounded border-2 border-gray-200 w-full"
-      placeholder="Search for meals"
-    />
 
     <div class="flex gap-2 justify-center mt-2">
       <RouterLink :to="{ name: 'byLetter', params: {letter} }" v-for="letter of lettersArray" :key="letter">

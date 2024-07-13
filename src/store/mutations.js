@@ -1,3 +1,9 @@
-const mutations = {}
+export const setSearchedMeal = (state, meals) => {
+  state.searchedMeals = meals;
+};
 
-export default mutations
+const mutations = {
+  setSearchedMeal,
+};
+
+export default mutations;

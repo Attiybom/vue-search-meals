@@ -1,7 +1,8 @@
 const state = {
   meals: ["Salmon"],
   loading: false,
-  error: null
+  error: null,
+  searchedMeals:[]
 }
 
 export default state
